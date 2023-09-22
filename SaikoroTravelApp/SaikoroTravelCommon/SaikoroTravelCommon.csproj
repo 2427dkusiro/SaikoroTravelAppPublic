@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+	  <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\Instruction.json" />
+    <None Remove="Resources\InstructionSchema.json" />
+    <None Remove="Resources\Lottery.json" />
+    <None Remove="Resources\LotterySchema.json" />
+    <None Remove="Resources\Route.json" />
+    <None Remove="Resources\RouteSchema.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Instruction.json" />
+    <EmbeddedResource Include="Resources\InstructionSchema.json" />
+    <EmbeddedResource Include="Resources\Lottery.json" />
+    <EmbeddedResource Include="Resources\LotterySchema.json" />
+    <EmbeddedResource Include="Resources\Route.json" />
+    <EmbeddedResource Include="Resources\RouteSchema.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Text.Json" Version="6.0.5" />
+  </ItemGroup>
+
+  <ProjectExtensions><VisualStudio><UserProperties resources_4instruction_1json__JsonSchema="" resources_4lottery_1json__JsonSchema="LotterySchema.json" resources_4route_1json__JsonSchema="" /></VisualStudio></ProjectExtensions>
+
+</Project>

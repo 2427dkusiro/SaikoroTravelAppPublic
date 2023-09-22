@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/activity_common_margin"
+    >
+
+    <Button
+        android:id="@+id/TestNotificationButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="テスト通知の配信"
+        />
+
+    <Button
+        android:id="@+id/TestTimerButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="タイマーのテスト"
+        />
+
+    <!--
+    <Button
+        android:id="@+id/TestInstructionNotificationButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="指示開封通知のテスト"
+        />
+
+    <Button
+        android:id="@+id/TestInstructionTimerButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="指示タイマーのテスト"
+        />
+
+    <Button
+        android:id="@+id/TestLotteryNotificationButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="抽選開封通知のテスト"
+        />
+
+    <Button
+        android:id="@+id/TestLotteryTimerButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="抽選タイマーのテスト"
+        />
+    -->
+
+</LinearLayout>

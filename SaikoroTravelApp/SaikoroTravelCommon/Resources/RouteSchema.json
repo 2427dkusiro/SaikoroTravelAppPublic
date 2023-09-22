@@ -1,0 +1,100 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+        "data": {
+            "items": {
+                "type": "object",
+                "required": [
+                    "id",
+                    "displayName",
+                    "day",
+                    "departureName",
+                    "departureTime",
+                    "destinationVisible",
+                    "defaultState",
+                    "message",
+                    "messageVisible",
+                    "users"
+                ],
+                "additionalProperties": false,
+                "properties": {
+                    "id": {
+                        "type": "string"
+                    },
+                    "displayName": {
+                        "type": "string"
+                    },
+                    "day": {
+                        "type": "integer"
+                    },
+                    "departureName": {
+                        "type": "string"
+                    },
+                    "departureTime": {
+                        "type": "string",
+                        "format": "time"
+                    },
+                    "destinationName": {
+                        "type": "string"
+                    },
+                    "destinationTime": {
+                        "type": "string",
+                        "format": "time"
+                    },
+                    "trainName": {
+                        "type": "string"
+                    },
+                    "trainDetail": {
+                        "type": "string"
+                    },
+                    "price": {
+                        "type": "integer"
+                    },
+                    "message": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        },
+                        "minItems": 0,
+                        "maxItems": 3
+                    },
+                    "messageVisible": {
+                        "type": "array",
+                        "items": {
+                            "type": "boolean"
+                        },
+                        "minItems": 0,
+                        "maxItems": 3
+                    },
+                    "destinationVisible": {
+                        "type": "boolean"
+                    },
+                    "defaultState": {
+                        "type": "string",
+                        "enum": [
+                            "waitingForActivation",
+                            "unsettled",
+                            "abandoned",
+                            "activated",
+                            "executed"
+                        ]
+                    },
+                    "users": {
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "enum": [
+                                "all"
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "referenceTime": {
+            "type": "string",
+            "format": "date-time"
+        }
+    }
+}

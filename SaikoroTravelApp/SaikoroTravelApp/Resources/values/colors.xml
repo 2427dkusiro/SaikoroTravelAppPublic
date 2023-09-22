@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#2c3e50</color>
+    <color name="colorPrimaryDark">#1B3147</color>
+    <color name="colorAccent">#3498db</color>
+
+	<color name="routeLight">#e1fff9</color>
+	<color name="routeHeavy">#9ffbe8</color>
+	<color name="routeFont">#4d4e54</color>
+
+	<color name="instructionBackground">#ffffff</color>
+	<color name="instructionFrame">#180614</color>
+</resources>

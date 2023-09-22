@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "334418331588",
+    "project_id": "saikorotravelapp",
+    "storage_bucket": "saikorotravelapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:334418331588:android:9632557f5c8d2d36cf4691",
+        "android_client_info": {
+          "package_name": "com.kujiro.saikorotravelapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "334418331588-r1t1gfa08360ki2pfh1n5ovtrcf55g93.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDRxfCxV_0GFSCNcsE64WWmw3Bij7V0oBk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "334418331588-r1t1gfa08360ki2pfh1n5ovtrcf55g93.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

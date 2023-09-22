@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">サイコロの旅アプリ</string>
+    <string name="action_settings">v2022.08.27</string>
+
+	<string name="CurrentRouteLabel">現在の行程</string>
+	<string name="NextRouteLabel">次の行程</string>
+</resources>

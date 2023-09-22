@@ -1,0 +1,10 @@
+<resources>
+	<dimen name="fab_margin">16dp</dimen>
+
+	<dimen name="activity_common_margin">6dp</dimen>
+
+	<dimen name="home_route_card_margin">8dp</dimen>
+	<dimen name="home_route_card_elevation">4dp</dimen>
+
+	<dimen name="instruction_card_padding">4dp</dimen>
+</resources>

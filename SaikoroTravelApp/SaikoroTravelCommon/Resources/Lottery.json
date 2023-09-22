@@ -1,0 +1,692 @@
+{
+  "$schema": "./LotterySchema.json",
+  "referenceTime": "2022-08-28T00:00:00Z",
+  "data": [
+    {
+      "id": "03",
+      "title": "三島からの出発方向",
+      "day": 1,
+      "desiredNotificationTime": "07:21:00Z",
+      "limitTime": "07:29:00Z",
+      "defaultState": "waitingForActivation",
+      "users": [ "all" ],
+      "content": [
+        {
+          "number": [ 1, 2, 3, 4 ],
+          "selectable": false,
+          "title": [ "東海道線　静岡方面", "東海道線　静岡方面", "東海道線　静岡方面", "東海道線　静岡方面" ],
+          "subTitle": [ "ここから西へ出発", "結局通るよ　沼津", "源平合戦で有名　富士川を渡って", "三保の松原、田子の浦..." ]
+        },
+        {
+          "number": [ 5 ],
+          "selectable": true,
+          "title": [ "東海道線　静岡方面" ],
+          "subTitle": [ "久能山のふもと　静岡市" ],
+          "instructionUpdates": [
+            {
+              "instructionId": "03",
+              "field": "state",
+              "value": "activated"
+            }
+          ]
+        },
+        {
+          "number": [ 6 ],
+          "selectable": false,
+          "title": [ "身延線　甲府方面" ],
+          "subTitle": [ "富士山をぐるっと周りこみ北へ" ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "豊橋からの進行方向",
+      "day": 1,
+      "desiredNotificationTime": "10:08:00Z",
+      "limitTime": "10:18:00Z",
+      "defaultState": "waitingForActivation",
+      "users": [ "all" ],
+      "content": [
+        {
+          "number": [ 1, 2 ],
+          "selectable": false,
+          "title": [ "東海道線　名古屋方面", "東海道線　名古屋方面" ],
+          "subTitle": [ "さらに西へ出発", "景色も海沿いから都会の景色へ" ]
+        },
+        {
+          "number": [ 3 ],
+          "selectable": true,
+          "title": [ "東海道線　名古屋方面" ],
+          "subTitle": [ "#徳川家康で有名　岡崎を通り" ],
+          "instructionUpdates": [
+            {
+              "instructionId": "06",
+              "field": "state",
+              "value": "activated"
+            }
+          ]
+        },
+        {
+          "number": [ 4, 5 ],
+          "selectable": false,
+          "title": [ "東海道線　名古屋方面", "東海道線　名古屋方面" ],
+          "subTitle": [ "三種の神器で有名　熱田神宮を通り", "味噌カツ食べたい　名古屋市へ" ],
+          "instructionUpdates": [
+            {
+              "instructionId": "06",
+              "field": "state",
+              "value": "activated"
+            }
+          ]
+        },
+        {
+          "number": [ 6 ],
+          "selectable": false,
+          "title": [ "飯田線　松本方面" ],
+          "subTitle": [ "天竜川に沿って北上する秘境路線" ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "名古屋からの進行方向",
+      "day": 1,
+      "desiredNotificationTime": "11:02:00Z",
+      "limitTime": "11:12:00Z",
+      "defaultState": "waitingForActivation",
+      "users": [ "all" ],
+      "content": [
+        {
+          "number": [ 1, 2 ],
+          "selectable": false,
+          "title": [ "東海道線　大垣方面", "東海道線　大垣方面" ],
+          "subTitle": [ "引き続き乗車 北西へ", "ガンガンいこうぜ" ],
+          "instructionUpdates": [
+            {
+              "instructionId": "07",
+              "field": "state",
+              "value": "activated"
+            },
+            {
+              "instructionId": "08",
+              "field": "state",
+              "value": "abandoned"
+            },
+            {
+              "instructionId": "09",
+              "field": "state",
+              "value": "abandoned"
+            },
+            {
+              "instructionId": "10",
+              "field": "state",
+              "value": "waitingForActivation"
+            },
+            {
+              "instructionId": "11",
+              "field": "state",
+              "value": "abandoned"
+            }
+          ]
+        },
+        {
+          "number": [ 3 ],
+          "selectable": true,
+          "title": [ "名古屋で途中下車" ],
+          "subTitle": [ "ちょっと休憩　買い物タイム" ],
+          "instructionUpdates": [
+            {
+              "instructionId": "07",
+              "field": "state",
+              "value": "abandoned"
+            },
+            {
+              "instructionId": "08",
+              "field": "state",
+              "value": "activated"
+            },
+            {
+              "instructionId": "09",
+              "field": "state",
+              "value": "waitingForActivation"
+            },
+            {
+              "instructionId": "10",
+              "field": "state",
+              "value": "abandoned"
+            },
+            {
+              "instructionId": "11",
+              "field": "state",
+              "value": "waitingForActivation"
+            }
+          ]
+        },
+        {
+          "number": [ 4 ],
+          "selectable": false,
+          "title": [ "名古屋で途中下車" ],
+          "subTitle": [ "そろそろ降りたい" ]
+        },
+        {
+          "number": [ 5 ],
+          "selectable": false,
+          "title": [ "紀勢本線　津方面" ],
+          "subTitle": [ "伊勢湾をぐるっと南西に三重へ" ]
+        },
+        {
+          "number": [ 6 ],
+          "selectable": false,
+          "title": [ "高山本線　高山方面" ],
+          "subTitle": [ "山越えのローカル線で北へ" ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "米原からの進行方向",
+      "day": 1,
+      "desiredNotificationTime": "12:36:00Z",
+      "limitTime": "12:46:00Z",
+      "defaultState": "waitingForActivation",
+      "users": [ "all" ],
+      "content": [
+        {
+          "number": [ 1, 2, 3 ],
+          "selectable": false,
+          "title": [ "東海道線　京都方面", "東海道線　京都方面", "東海道線　京都方面" ],
+          "subTitle": [ "さらに西へ出発", "いよいよJR西日本エリア", "通称「無料の特急」新快速で" ]
+        },
+        {
+          "number": [ 4 ],
+          "selectable": true,
+          "title": [ "東海道線　京都方面" ],
+          "subTitle": [ "下手な特急より速い新快速" ],
+          "instructionUpdates": [
+            {
+              "instructionId": "12",
+              "field": "state",
+              "value": "activated"
+            }
+          ]
+        },
+        {
+          "number": [ 5, 6 ],
+          "selectable": false,
+          "title": [ "北陸本線　敦賀方面", "北陸本線　敦賀方面" ],
+          "subTitle": [ "ここから北に日本海側へ", "琵琶湖の東を行く" ]
+        }
+      ]
+    },
+    {
+      "id": "07",
+      "title": "大阪からの進行方向",
+      "day": 1,
+      "desiredNotificationTime": "14:03:00Z",
+      "limitTime": "14:13:00Z",
+      "defaultState": "waitingForActivation",
+      "users": [ "all" ],
+      "content": [
+        {
+          "number": [ 1 ],
+          "selectable": true,
+          "title": [ "山陽本線　神戸方面" ],
+          "subTitle": [ "まだまだ西へ　山陽本線に直通" ],
+          "instructionUpdates": [
+            {
+              "instructionId": "13",
+              "field": "state",
+              "value": "activated"
+            }
+          ]
+        },
+        {
+          "number": [ 2, 3 ],
+          "selectable": false,
+          "title": [ "山陽本線　神戸方面", "阪和線　和歌山方面" ],
+          "subTitle": [ "惜しいけれど大阪はスルー", "ここから南へ　関空・紀州路快速" ]
+        },
+        {
+          "number": [ 4 ],
+          "selectable": false,
+          "title": [ "福知山線　福知山方面" ],
+          "subTitle": [ "ここから北へ　実は京都府" ]
+        },
+        {
+          "number": [ 5 ],
+          "selectable": false,
+          "title": [ "大阪で途中下車" ],
+          "subTitle": [ "ちょっと寄り道　現地観光" ]
+        },
+        {
+          "number": [ 6 ],
+          "selectable": false,
+          "title": [ "大阪で途中下車" ],
+          "subTitle": [ "大阪バスターミナルへ" ]
+        }
+      ]
+    },
+    {
+      "id": "08",
+      "title": "岡山からの進行方向",
+      "day": 1,
+      "desiredNotificationTime": "16:53:00Z",
+      "limitTime": "17:03:00Z",
+      "defaultState": "waitingForActivation",
+      "users": [ "all" ],
+      "content": [
+        {
+          "number": [ 1, 2 ],
+          "selectable": false,
+          "title": [ "山陽本線　福山方面", "山陽本線　福山方面" ],
+          "subTitle": [ "尾道を通り　まだまだ西へ", "瀬戸内海の島々を横目に" ]
+        },
+        {
+          "number": [ 3 ],
+          "selectable": true,
+          "title": [ "瀬戸大橋線　高松方面" ],
+          "subTitle": [
+            "ここから南へ　海の向こうへ"
+          ],
+          "instructionUpdates": [
+            {
+              "instructionId": "16",
+              "field": "state",
+              "value": "activated"
+            }
+          ]
+        },
+        {
+          "number": [ 4, 5 ],
+          "selectable": false,
+          "title": [ "瀬戸大橋線　高松方面", "伯備線　米子方面" ],
+          "subTitle": [ "電車で渡る海の眺めを楽しみながら", "ここから北に山陰へ　妖怪の街米子" ]
+        },
+        {
+          "number": [ 6 ],
+          "selectable": false,
+          "title": [ "岡山で途中下車" ],
+          "subTitle": [ "そろそろ疲れた　一休み" ]
+        }
+      ]
+    },
+    {
+      "id": "09",
+      "title": "高松からの行程",
+      "day": 1,
+      "desiredNotificationTime": "19:00:00Z",
+      "limitTime": "19:10:00Z",
+      "defaultState": "waitingForActivation",
+      "users": [ "all" ],
+      "content": [
+        {
+          "number": [ 1 ],
+          "selectable": false,
+          "title": [ "普通列車で徳島" ],
+          "subTitle": [ "意外と近い　今日中に到着" ]
+        },
+        {
+          "number": [ 2 ],
+          "selectable": false,
+          "title": [ "普通列車で高知" ],
+          "subTitle": [ "ローカル線なので　途中で一泊　" ]
+        },
+        {
+          "number": [ 3 ],
+          "selectable": false,
+          "title": [ "特急で高知" ],
+          "subTitle": [ "特急なのでもちろん　今日中に到着" ]
+        },
+        {
+          "number": [ 4 ],
+          "selectable": false,
+          "title": [ "普通列車で松山" ],
+          "subTitle": [ "結構遠いので　途中で一泊" ]
+        },
+        {
+          "number": [ 5 ],
+          "selectable": true,
+          "title": [ "特急で松山" ],
+          "subTitle": [ "特急なのでもちろん　今日中に到着" ],
+          "instructionUpdates": [
+            {
+              "instructionId": "18",
+              "field": "state",
+              "value": "activated"
+            }
+          ]
+        },
+        {
+          "number": [ 6 ],
+          "selectable": false,
+          "title": [ "ここで一泊" ],
+          "subTitle": [ "のんびり夜ご飯　高松観光" ]
+        }
+      ]
+    },
+    {
+      "id": "10",
+      "title": "松山からの行程",
+      "day": 1,
+      "desiredNotificationTime": "22:35:00Z",
+      "limitTime": "22:45:00Z",
+      "defaultState": "waitingForActivation",
+      "users": [ "all" ],
+      "content": [
+        {
+          "number": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "selectable": false,
+          "title": [ "松山で一泊", "松山で一泊", "松山で一泊", "松山で一泊", "普通列車　八幡浜行" ],
+          "subTitle": [ "明日は高知方面へ", "明日は高知方面へ", "明日は戻って本州へ", "明日は松山観光から開始", "まだ行ける　今のうちに移動" ]
+        },
+        {
+          "number": [ 6 ],
+          "selectable": true,
+          "title": [ "普通列車　八幡浜行" ],
+          "subTitle": [ "ローカル線なので　もう最終列車" ],
+          "instructionUpdates": [
+            {
+              "instructionId": "19",
+              "field": "state",
+              "value": "activated"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "11",
+      "title": "八幡浜からの進行方向",
+      "day": 2,
+      "desiredNotificationTime": "00:15:00Z",
+      "limitTime": "00:25:00Z",
+      "defaultState": "waitingForActivation",
+      "users": [ "all" ],
+      "content": [
+        {
+          "number": [ 1, 2 ],
+          "selectable": false,
+          "title": [ "宇和島運輸　別府行", "宇和島運輸　別府行" ],
+          "subTitle": [ "温泉の街　地獄めぐりで有名", "臼杵より北側へ" ]
+        },
+        {
+          "number": [ 3, 4 ],
+          "selectable": false,
+          "title": [ "宇和島運輸　臼杵行", "オレンジフェリー　臼杵行" ],
+          "subTitle": [ "小さな港町　臼杵へ", "臼杵行は2つの会社が運行中" ]
+        },
+        {
+          "number": [ 5 ],
+          "selectable": true,
+          "title": [ "オレンジフェリー　臼杵行" ],
+          "subTitle": [ "別府より南側へ" ],
+          "instructionUpdates": [
+            {
+              "instructionId": "21",
+              "field": "state",
+              "value": "activated"
+            }
+          ]
+        },
+        {
+          "number": [ 6 ],
+          "selectable": false,
+          "title": [ "ここで一泊" ],
+          "subTitle": [ "今日は休んで　宇和島方面" ]
+        }
+      ]
+    },
+    {
+      "id": "12",
+      "title": "臼杵からの出発方向",
+      "day": 2,
+      "desiredNotificationTime": "06:00:00Z",
+      "limitTime": "06:10:00Z",
+      "defaultState": "waitingForActivation",
+      "users": [ "all" ],
+      "content": [
+        {
+          "number": [ 1, 2 ],
+          "selectable": false,
+          "title": [ "福岡県　小倉方面", "福岡県　小倉方面" ],
+          "subTitle": [ "ここから北へ", "門司港のレトロな景観が有名" ]
+        },
+        {
+          "number": [ 3, 4 ],
+          "selectable": false,
+          "title": [ "熊本県　熊本方面", "熊本県　熊本方面" ],
+          "subTitle": [ "ここから西へ", "熊本城で有名" ]
+        },
+        {
+          "number": [ 5 ],
+          "selectable": true,
+          "title": [ "宮崎県　宮崎方面" ],
+          "subTitle": [ "ここから南へ" ],
+          "instructionUpdates": [
+            {
+              "instructionId": "23",
+              "field": "state",
+              "value": "activated"
+            }
+          ]
+        },
+        {
+          "number": [ 6 ],
+          "selectable": false,
+          "title": [ "宮崎県　宮崎方面" ],
+          "subTitle": [ "南国風の景観が有名" ]
+        }
+      ]
+    },
+    {
+      "id": "13",
+      "title": "宮崎空港からの出発方向",
+      "day": 2,
+      "desiredNotificationTime": "14:20:00Z",
+      "limitTime": "14:30:00Z",
+      "defaultState": "waitingForActivation",
+      "users": [ "all" ],
+      "content": [
+        {
+          "number": [ 1, 2 ],
+          "selectable": false,
+          "title": [ "福岡空港", "福岡空港" ],
+          "subTitle": [ "JAL 3632便", "JAL 3632便" ]
+        },
+        {
+          "number": [ 3 ],
+          "selectable": false,
+          "title": [ "大分方面" ],
+          "subTitle": [ "特急にちりんシーガイア号" ]
+        },
+        {
+          "number": [ 4 ],
+          "selectable": true,
+          "title": [ "宮崎方面" ],
+          "subTitle": [ "普通列車で戻る" ],
+          "instructionUpdates": [
+            {
+              "instructionId": "28",
+              "field": "state",
+              "value": "activated"
+            }
+          ]
+        },
+        {
+          "number": [ 5, 6 ],
+          "selectable": false,
+          "title": [ "宮崎方面", "鹿児島方面" ],
+          "subTitle": [ "普通列車で戻る", "特急きりしま号　鹿児島中央行" ]
+        }
+      ]
+    },
+    {
+      "id": "14",
+      "title": "鹿児島からの出発方向",
+      "day": 3,
+      "desiredNotificationTime": "10:25:00Z",
+      "limitTime": "10:35:00Z",
+      "defaultState": "waitingForActivation",
+      "users": [ "all" ],
+      "content": [
+        {
+          "number": [ 1, 2 ],
+          "selectable": false,
+          "title": [ "熊本方面", "熊本方面" ],
+          "subTitle": [ "普通列車で北上", "新幹線で北上" ]
+        },
+        {
+          "number": [ 3, 4 ],
+          "selectable": false,
+          "title": [ "博多方面", "博多方面" ],
+          "subTitle": [ "普通列車でゆく", "高速バスでゆく" ]
+        },
+        {
+          "number": [ 5 ],
+          "selectable": true,
+          "title": [ "鹿児島観光" ],
+          "subTitle": [ "せっかくなので寄り道" ],
+          "instructionUpdates": [
+            {
+              "instructionId": "39",
+              "field": "state",
+              "value": "activated"
+            }
+          ]
+        },
+        {
+          "number": [ 6 ],
+          "selectable": false,
+          "title": [ "鹿児島観光" ],
+          "subTitle": [ "西郷隆盛像で記念写真" ]
+        }
+      ]
+    },
+    {
+      "id": "15",
+      "title": "博多からの旅程",
+      "day": 3,
+      "desiredNotificationTime": "20:45:00Z",
+      "limitTime": "20:55:00Z",
+      "defaultState": "waitingForActivation",
+      "users": [ "all" ],
+      "content": [
+        {
+          "number": [ 1 ],
+          "selectable": true,
+          "title": [ "対馬" ],
+          "subTitle": [ "海の向こう　韓国国境の島" ],
+          "instructionUpdates": [
+            {
+              "instructionId": "45",
+              "field": "state",
+              "value": "activated"
+            }
+          ]
+        },
+        {
+          "number": [ 2, 3, 4 ],
+          "selectable": false,
+          "title": [ "対馬", "ここで一泊", "ここで一泊" ],
+          "subTitle": [ "日本6番目の島(諸説あり)", "明日は長崎へ", "明日は長崎へ" ]
+        },
+        {
+          "number": [ 5, 6 ],
+          "selectable": false,
+          "title": [ "一日博多観光", "一日博多観光" ],
+          "subTitle": [ "ここで連泊　ゆったり観光", "太宰府天満宮など巡る旅" ]
+        }
+      ]
+    },
+    {
+      "id": "16",
+      "title": "対馬からの下船地",
+      "day": 4,
+      "desiredNotificationTime": "07:00:00Z",
+      "limitTime": "07:10:00Z",
+      "defaultState": "waitingForActivation",
+      "users": [ "all" ],
+      "content": [
+        {
+          "number": [ 1, 2 ],
+          "selectable": false,
+          "title": [ "壱岐", "壱岐" ],
+          "subTitle": [ "途中にあったやや小さな島", "壱岐で一泊のんびり滞在" ]
+        },
+        {
+          "number": [ 3 ],
+          "selectable": true,
+          "title": [ "壱岐" ],
+          "subTitle": [ "日本5番目の島(諸説あり)" ],
+          "instructionUpdates": [
+            {
+              "instructionId": "47",
+              "field": "state",
+              "value": "activated"
+            }
+          ]
+        },
+        {
+          "number": [ 4, 5, 6 ],
+          "selectable": false,
+          "title": [ "博多", "博多", "博多" ],
+          "subTitle": [ "ひとまず九州へ帰還", "博多で一泊のんびり観光", "帰りは深夜便はないので" ]
+        }
+      ]
+    },
+    {
+      "id": "17",
+      "title": "博多からの旅程",
+      "day": 5,
+      "desiredNotificationTime": "17:00:00Z",
+      "limitTime": "17:10:00Z",
+      "defaultState": "waitingForActivation",
+      "users": [ "all" ],
+      "content": [
+        {
+          "number": [ 1, 2 ],
+          "selectable": false,
+          "title": [ "四国経由　東京", "四国経由　東京" ],
+          "subTitle": [ "またもや四国経由", "帰りは別府港から八幡浜へ" ]
+        },
+        {
+          "number": [ 3 ],
+          "selectable": true,
+          "title": [ "下関経由　東京" ],
+          "subTitle": [ "帰りはトンネルで本州へ" ],
+          "instructionUpdates": [
+            {
+              "instructionId": "52",
+              "field": "state",
+              "value": "activated"
+            }
+          ]
+        },
+        {
+          "number": [ 4 ],
+          "selectable": false,
+          "title": [ "下関経由　東京" ],
+          "subTitle": [ "流石に飽きた　夜行フェリー" ]
+        },
+        {
+          "number": [ 5 ],
+          "selectable": false,
+          "title": [ "佐賀空港経由　成田" ],
+          "subTitle": [ "スプリングでひとっ飛び" ]
+        },
+        {
+          "number": [ 6 ],
+          "selectable": false,
+          "title": [ "長崎空港経由　成田" ],
+          "subTitle": [ "ピーチでひとっ飛び" ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ユーザー名を選択してください"
+        />
+
+    <Spinner
+        android:id="@+id/UserSelect"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ユーザー確認コードを入力"
+        />
+
+    <EditText
+        android:id="@+id/UserConfirmCodeInput"
+        android:inputType="numberPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/RegisterUserButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="登録を実行する"
+        />
+
+</LinearLayout>

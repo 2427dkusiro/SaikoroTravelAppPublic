@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/activity_common_margin"
+    >
+
+    <TextView
+        android:id="@+id/LotteryTitleText"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="8dp"
+        android:includeFontPadding="false"
+        android:gravity="center"
+        android:autoSizeTextType="uniform"
+        />
+
+    <SaikoroTravelApp.Components.LotteryView
+        android:id="@+id/LotteryOptionLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="6"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:orientation="vertical"
+        />
+
+    <Button
+        android:id="@+id/StartLotteryButton"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="抽選を実行する"
+        />
+
+</LinearLayout>

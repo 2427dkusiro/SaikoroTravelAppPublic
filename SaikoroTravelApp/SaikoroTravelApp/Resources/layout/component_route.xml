@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/routeLight"
+        >
+
+        <!--上部タイトル要素-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="110"
+            android:orientation="horizontal"
+        >
+
+            <!--左余白-->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                />
+
+            <!--中央コンテンツ領域-->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                >
+
+                <!--上部余白-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="54"
+                    />
+
+                <!--タイトル　テキスト-->
+                <TextView
+                    android:id="@+id/RouteTitleText"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="54"
+                    android:layout_margin="0dp"
+                    android:padding="0dp"
+                    android:includeFontPadding="false"
+                    android:gravity="center"
+                    android:textColor="@color/routeFont"
+                    app:autoSizeTextType="uniform"
+                    />
+
+                <!--下部線-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="6"
+                    android:background="@color/routeFont"
+                    />
+
+            </LinearLayout>
+
+            <!--右余白-->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                />
+
+        </LinearLayout>
+
+        <!--中央　データ領域-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="237"
+            android:orientation="vertical"
+        >
+
+            <!--上部余白-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="33"
+                />
+
+            <!--駅名領域-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="77"
+                android:orientation="horizontal"
+                >
+
+                <!--左余白-->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    />
+
+                <!--出発地-->
+                <TextView
+                    android:id="@+id/RouteDepartureName"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="8"
+                    android:layout_margin="0dp"
+                    android:padding="0dp"
+                    android:includeFontPadding="false"
+                    android:gravity="center"
+                    android:textColor="@color/routeFont"
+                    app:autoSizeTextType="uniform"
+                />
+
+                <!--矢印-->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:layout_margin="0dp"
+                    android:padding="0dp"
+                    android:includeFontPadding="false"
+                    android:gravity="center"
+                    android:text="⇒"
+                    app:autoSizeTextType="uniform"
+                />
+
+                <!--到着地-->
+                <TextView
+                    android:id="@+id/RouteDestinationName"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="8"
+                    android:layout_margin="0dp"
+                    android:padding="0dp"
+                    android:includeFontPadding="false"
+                    android:gravity="center"
+                    android:textColor="@color/routeFont"
+                    app:autoSizeTextType="uniform"
+                />
+
+                <!--右余白-->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    />
+            </LinearLayout>
+
+            <!--時刻領域-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="48"
+                android:layout_margin="0dp"
+                android:padding="0dp"
+                android:orientation="horizontal"
+                >
+
+                <!--左余白-->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    />
+
+                <!--出発時刻-->
+                <TextView
+                    android:id="@+id/RouteDepartureTime"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="8"
+                    android:layout_margin="0dp"
+                    android:padding="0dp"
+                    android:includeFontPadding="false"
+                    android:gravity="center"
+                    android:textColor="@color/routeFont"
+                    app:autoSizeTextType="uniform"
+                />
+
+                <!--駅名矢印の領域調整-->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                />
+
+                <!--到着時刻-->
+                <TextView
+                    android:id="@+id/RouteDestinationTime"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="8"
+                    android:layout_margin="0dp"
+                    android:padding="0dp"
+                    android:includeFontPadding="false"
+                    android:gravity="center"
+                    android:textColor="@color/routeFont"
+                    app:autoSizeTextType="uniform"
+                />
+
+                <!--右余白-->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    />
+            </LinearLayout>
+
+            <!--名前領域-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="42"
+                android:orientation="horizontal"
+                >
+
+                <!--左余白-->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    />
+
+                <!--移動手段名-->
+                <TextView
+                    android:id="@+id/RouteTrainName"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="8"
+                    android:layout_margin="0dp"
+                    android:padding="0dp"
+                    android:includeFontPadding="false"
+                    android:textColor="@color/routeFont"
+                    app:autoSizeTextType="uniform"
+                />
+
+                <!--駅名矢印の領域調整-->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                />
+
+                <!--移動手段詳細情報-->
+                <TextView
+                    android:id="@+id/RouteTrainDetails"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="8"
+                    android:layout_margin="0dp"
+                    android:padding="0dp"
+                    android:includeFontPadding="false"
+                    android:textColor="@color/routeFont"
+                    app:autoSizeTextType="uniform"
+                />
+
+                <!--右余白-->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    />
+            </LinearLayout>
+
+            <!--価格領域-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="37"
+                android:orientation="horizontal"
+                >
+
+                <!--右余白-->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    />
+
+                <!--価格領域-->
+                <TextView
+                    android:id="@+id/RoutePriceText"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="19"
+                    android:layout_margin="0dp"
+                    android:padding="0dp"
+                    android:includeFontPadding="false"
+                    android:textColor="@color/routeFont"
+                    app:autoSizeTextType="uniform"
+                />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="82"
+            android:orientation="vertical"
+            android:background="@color/routeHeavy"
+        />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="146"
+            android:orientation="horizontal"
+        >
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="18"
+                android:orientation="vertical"
+            >
+
+                <TextView
+                    android:id="@+id/RouteMessageLine1"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="42"
+                    android:layout_margin="0dp"
+                    android:padding="0dp"
+                    android:includeFontPadding="false"
+                    android:textColor="@color/routeFont"
+                    app:autoSizeTextType="uniform"
+                />
+
+                <TextView
+                    android:id="@+id/RouteMessageLine2"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="42"
+                    android:layout_margin="0dp"
+                    android:padding="0dp"
+                    android:includeFontPadding="false"
+                    android:textColor="@color/routeFont"
+                    app:autoSizeTextType="uniform"
+                />
+
+                <TextView
+                    android:id="@+id/RouteMessageLine3"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="42"
+                    android:layout_margin="0dp"
+                    android:padding="0dp"
+                    android:includeFontPadding="false"
+                    android:textColor="@color/routeFont"
+                    app:autoSizeTextType="uniform"
+                />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="20"
+        />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</merge>

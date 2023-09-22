@@ -1,0 +1,1261 @@
+{
+  "$schema": "./InstructionSchema.json",
+  "referenceTime": "2022-08-28T00:00:00Z",
+  "data": [
+    {
+      "id": "02",
+      "day": 1,
+      "desiredNotificationTime": "07:11:00Z",
+      "limitTime": "07:21:00Z",
+      "content": "三島で下車せよ",
+      "defaultState": "waitingForActivation",
+      "routeUpdates": [
+        {
+          "routeId": "02",
+          "field": "destinationVisible",
+          "value": true
+        }
+      ],
+      "users": [ "all" ]
+    },
+    {
+      "id": "03",
+      "day": 1,
+      "desiredNotificationTime": "07:21:00Z",
+      "limitTime": "07:29:00Z",
+      "content": "静岡行に乗車せよ",
+      "defaultState": "unsettled",
+      "routeUpdates": [
+        {
+          "routeId": "03",
+          "field": "state",
+          "value": "activated"
+        }
+      ],
+      "users": [ "all" ]
+    },
+    {
+      "id": "04",
+      "day": 1,
+      "desiredNotificationTime": "08:19:00Z",
+      "limitTime": "08:29:00Z",
+      "content": "静岡で浜松行に乗り換えよ\n(乗り換え時間に注意！)",
+      "defaultState": "waitingForActivation",
+      "routeUpdates": [
+        {
+          "routeId": "03",
+          "field": "destinationVisible",
+          "value": true
+        },
+        {
+          "routeId": "03",
+          "field": "message1",
+          "value": true
+        },
+        {
+          "routeId": "04",
+          "field": "state",
+          "value": "activated"
+        }
+      ],
+      "users": [ "all" ]
+    },
+    {
+      "id": "05",
+      "day": 1,
+      "desiredNotificationTime": "09:31:00Z",
+      "limitTime": "09:41:00Z",
+      "content": "浜松で大垣行に乗り換えよ\n(乗り換え時間に注意！)",
+      "defaultState": "waitingForActivation",
+      "routeUpdates": [
+        {
+          "routeId": "04",
+          "field": "destinationVisible",
+          "value": true
+        },
+        {
+          "routeId": "04",
+          "field": "message1",
+          "value": true
+        },
+        {
+          "routeId": "05",
+          "field": "state",
+          "value": "activated"
+        }
+      ],
+      "users": [ "all" ]
+    },
+    {
+      "id": "06",
+      "day": 1,
+      "desiredNotificationTime": "10:08:00Z",
+      "limitTime": "10:18:00Z",
+      "content": "引き続き乗車せよ",
+      "defaultState": "unsettled",
+      "routeUpdates": [],
+      "users": [ "all" ]
+    },
+    {
+      "id": "07",
+      "day": 1,
+      "desiredNotificationTime": "11:02:00Z",
+      "limitTime": "11:12:00Z",
+      "content": "引き続き乗車せよ",
+      "defaultState": "unsettled",
+      "routeUpdates": [
+        {
+          "routeId": "05-01",
+          "field": "state",
+          "value": "abandoned"
+        },
+        {
+          "routeId": "05-02",
+          "field": "state",
+          "value": "abandoned"
+        }
+      ],
+      "users": [ "all" ]
+    },
+    {
+      "id": "08",
+      "day": 1,
+      "desiredNotificationTime": "11:02:00Z",
+      "limitTime": "11:12:00Z",
+      "content": "名古屋で下車せよ",
+      "defaultState": "unsettled",
+      "routeUpdates": [
+        {
+          "routeId": "05",
+          "field": "state",
+          "value": "abandoned"
+        },
+        {
+          "routeId": "05-01",
+          "field": "state",
+          "value": "activated"
+        }
+      ],
+      "users": [ "all" ]
+    },
+    {
+      "id": "09",
+      "day": 1,
+      "desiredNotificationTime": "11:12:00Z",
+      "limitTime": "11:22:00Z",
+      "content": "名古屋で昼食を調達し\n後続の大垣行に乗車せよ",
+      "defaultState": "unsettled",
+      "routeUpdates": [
+        {
+          "routeId": "05-02",
+          "field": "state",
+          "value": "activated"
+        }
+      ],
+      "users": [ "all" ]
+    },
+    {
+      "id": "10",
+      "day": 1,
+      "desiredNotificationTime": "11:37:00Z",
+      "limitTime": "11:47:00Z",
+      "content": "大垣にて昼食を調達してから\n米原行に乗車せよ",
+      "defaultState": "unsettled",
+      "routeUpdates": [
+        {
+          "routeId": "05",
+          "field": "destinationVisible",
+          "value": true
+        },
+        {
+          "routeId": "06",
+          "field": "state",
+          "value": "activated"
+        },
+        {
+          "routeId": "06",
+          "field": "message1",
+          "value": true
+        }
+      ],
+      "users": [ "all" ]
+    },
+    {
+      "id": "11",
+      "day": 1,
+      "desiredNotificationTime": "11:52:00Z",
+      "limitTime": "12:02:00Z",
+      "content": "大垣で米原行に乗り換えよ",
+      "defaultState": "unsettled",
+      "routeUpdates": [
+        {
+          "routeId": "05-02",
+          "field": "destinationVisible",
+          "value": true
+        },
+        {
+          "routeId": "06",
+          "field": "state",
+          "value": "activated"
+        }
+      ],
+      "users": [ "all" ]
+    },
+    {
+      "id": "12",
+      "day": 1,
+      "desiredNotificationTime": "12:36:00Z",
+      "limitTime": "12:46:00Z",
+      "content": "米原で新快速 姫路行に乗り換えよ\n(乗り換え時間に注意！)",
+      "defaultState": "unsettled",
+      "routeUpdates": [
+        {
+          "routeId": "06",
+          "field": "destinationVisible",
+          "value": true
+        },
+        {
+          "routeId": "06",
+          "field": "message2",
+          "value": true
+        },
+        {
+          "routeId": "07",
+          "field": "state",
+          "value": "activated"
+        }
+      ],
+      "users": [ "all" ]
+    },
+    {
+      "id": "13",
+      "day": 1,
+      "desiredNotificationTime": "14:03:00Z",
+      "limitTime": "14:13:00Z",
+      "content": "引き続き乗車せよ",
+      "defaultState": "unsettled",
+      "routeUpdates": [],
+      "users": [ "all" ]
+    },
+    {
+      "id": "14",
+      "day": 1,
+      "desiredNotificationTime": "15:08:00Z",
+      "limitTime": "15:18:00Z",
+      "content": "姫路で播州赤穂行に乗り換えよ",
+      "defaultState": "waitingForActivation",
+      "routeUpdates": [
+        {
+          "routeId": "07",
+          "field": "destinationVisible",
+          "value": true
+        },
+        {
+          "routeId": "08",
+          "field": "state",
+          "value": "activated"
+        }
+      ],
+      "users": [ "all" ]
+    },
+    {
+      "id": "15",
+      "day": 1,
+      "desiredNotificationTime": "15:43:00Z",
+      "limitTime": "15:53:00Z",
+      "content": "相生で山陽本線 三原行に乗り換えよ\n(乗り換え時間に注意！)",
+      "defaultState": "waitingForActivation",
+      "routeUpdates": [
+        {
+          "routeId": "08",
+          "field": "destinationVisible",
+          "value": true
+        },
+        {
+          "routeId": "08",
+          "field": "message1",
+          "value": true
+        },
+        {
+          "routeId": "09",
+          "field": "state",
+          "value": "activated"
+        }
+      ],
+      "users": [ "all" ]
+    },
+    {
+      "id": "16",
+      "day": 1,
+      "desiredNotificationTime": "16:53:00Z",
+      "limitTime": "17:03:00Z",
+      "content": "岡山で瀬戸大橋線\n高松行に乗り換えよ",
+      "defaultState": "unsettled",
+      "routeUpdates": [
+        {
+          "routeId": "09",
+          "field": "destinationVisible",
+          "value": true
+        },
+        {
+          "routeId": "10",
+          "field": "state",
+          "value": "activated"
+        }
+      ],
+      "users": [ "all" ]
+    },
+    {
+      "id": "17",
+      "day": 1,
+      "desiredNotificationTime": "17:56:00Z",
+      "limitTime": "18:06:00Z",
+      "content": "高松で香川名物うどんを食せ\n(嫌いな人は別のものでもOK)\n(**ｵｽｽﾒ「しんぺいうどん」)",
+      "defaultState": "waitingForActivation",
+      "routeUpdates": [
+        {
+          "routeId": "10",
+          "field": "destinationVisible",
+          "value": true
+        }
+      ],
+      "users": [ "all" ]
+    },
+    {
+      "id": "18",
+      "day": 1,
+      "desiredNotificationTime": "19:00:00Z",
+      "limitTime": "19:10:00Z",
+      "content": "駅窓口で特急の回数券を購入し\n特急いしづち25号で松山へ向かえ\n(詳細は玉手箱１を確認)",
+      "defaultState": "unsettled",
+      "routeUpdates": [
+        {
+          "routeId": "11",
+          "field": "state",
+          "value": "activated"
+        }
+      ],
+      "users": [ "all" ]
+    },
+    {
+      "id": "19",
+      "day": 1,
+      "desiredNotificationTime": "22:35:00Z",
+      "limitTime": "22:45:00Z",
+      "content": "松山から予讃線 八幡浜行に乗車せよ",
+      "defaultState": "unsettled",
+      "routeUpdates": [
+        {
+          "routeId": "12",
+          "field": "state",
+          "value": "activated"
+        }
+      ],
+      "users": [ "all" ]
+    },
+    {
+      "id": "20",
+      "day": 2,
+      "desiredNotificationTime": "00:03:00Z",
+      "limitTime": "00:13:00Z",
+      "content": "八幡浜で降り、改札を出よ\n(ここで切符2日目開始)",
+      "defaultState": "waitingForActivation",
+      "routeUpdates": [
+        {
+          "routeId": "12",
+          "field": "message1",
+          "value": true
+        },
+        {
+          "routeId": "12",
+          "field": "destinationVisible",
+          "value": true
+        }
+      ],
+      "users": [ "all" ]
+    },
+    {
+      "id": "21",
+      "day": 2,
+      "desiredNotificationTime": "00:15:00Z",
+      "limitTime": "00:25:00Z",
+      "content": "フェリーターミナルへ移動せよ\n(詳細は玉手箱２を確認せよ)",
+      "defaultState": "unsettled",
+      "routeUpdates": [
+        {
+          "routeId": "12.5",
+          "field": "state",
+          "value": "activated"
+        },
+        {
+          "routeId": "13",
+          "field": "state",
+          "value": "activated"
+        }
+      ],
+      "users": [ "all" ]
+    },
+    {
+      "id": "22",
+      "day": 2,
+      "desiredNotificationTime": "01:00:00Z",
+      "limitTime": "01:10:00Z",
+      "content": "臼杵到着後、6:30頃まで休憩してOKです",
+      "defaultState": "waitingForActivation",
+      "routeUpdates": [
+        {
+          "routeId": "13",
+          "field": "message1",
+          "value": true
+        }
+      ],
+      "users": [ "all" ]
+    },
+    {
+      "id": "23",
+      "day": 2,
+      "desiredNotificationTime": "05:15:00Z",
+      "limitTime": "05:25:00Z",
+      "content": "時間をみて臼杵駅へ移動し\n日豊本線　佐伯行に乗車せよ",
+      "defaultState": "unsettled",
+      "routeUpdates": [
+        {
+          "routeId": "13.5",
+          "field": "state",
+          "value": "activated"
+        },
+        {
+          "routeId": "14",
+          "field": "state",
+          "value": "activated"
+        }
+      ],
+      "users": [ "all" ]
+    },
+    {
+      "id": "24",
+      "day": 2,
+      "desiredNotificationTime": "07:43:00Z",
+      "limitTime": "07:53:00Z",
+      "defaultState": "waitingForActivation",
+      "content": "佐伯から延岡まで\n特急にちりん1号に乗車せよ",
+      "routeUpdates": [
+        {
+          "routeId": "14",
+          "field": "destinationVisible",
+          "value": true
+        },
+        {
+          "routeId": "15",
+          "field": "state",
+          "value": "activated"
+        }
+      ],
+      "users": [ "all" ]
+    },
+    {
+      "id": "25",
+      "day": 2,
+      "desiredNotificationTime": "09:10:00Z",
+      "limitTime": "09:20:00Z",
+      "defaultState": "waitingForActivation",
+      "content": "延岡から普通 宮崎空港行に乗車せよ",
+      "routeUpdates": [
+        {
+          "routeId": "16",
+          "field": "state",
+          "value": "activated"
+        }
+      ],
+      "users": [ "all" ]
+    },
+    {
+      "id": "26",
+      "day": 2,
+      "desiredNotificationTime": "11:10:00Z",
+      "limitTime": "11:20:00Z",
+      "defaultState": "waitingForActivation",
+      "content": "宮崎で昼食に宮崎名物でも食べ\n日南線　志布志行に乗車せよ",
+      "routeUpdates": [
+        {
+          "routeId": "16",
+          "field": "destinationVisible",
+          "value": true
+        },
+        {
+          "routeId": "16",
+          "field": "message1",
+          "value": true
+        },
+        {
+          "routeId": "17",
+          "field": "state",
+          "value": "activated"
+        }
+      ],
+      "users": [ "all" ]
+    },
+    {
+      "id": "27",
+      "day": 2,
+      "desiredNotificationTime": "12:48:00Z",
+      "limitTime": "12:58:00Z",
+      "defaultState": "waitingForActivation",
+      "content": "青島で下車し、青島を観光して\n宮崎空港へバスで移動せよ",
+      "routeUpdates": [
+        {
+          "routeId": "17",
+          "field": "destinationVisible",
+          "value": true
+        },
+        {
+          "routeId": "18",
+          "field": "state",
+          "value": "activated"
+        }
+      ],
+      "users": [ "all" ]
+    },
+    {
+      "id": "28",
+      "day": 2,
+      "desiredNotificationTime": "14:14:00Z",
+      "limitTime": "14:24:00Z",
+      "defaultState": "unsettled",
+      "content": "宮崎空港からJR線普通 延岡行に乗車せよ",
+      "routeUpdates": [
+        {
+          "routeId": "19",
+          "field": "state",
+          "value": "activated"
+        }
+      ],
+      "users": [ "all" ]
+    },
+    {
+      "id": "29",
+      "day": 2,
+      "desiredNotificationTime": "14:33:00Z",
+      "limitTime": "14:43:00Z",
+      "defaultState": "waitingForActivation",
+      "content": "延岡行は途中の南宮崎で下車せよ",
+      "routeUpdates": [
+        {
+          "routeId": "19",
+          "field": "destinationVisible",
+          "value": true
+        }
+      ],
+      "users": [ "all" ]
+    },
+    {
+      "id": "30",
+      "day": 2,
+      "desiredNotificationTime": "14:42:00Z",
+      "limitTime": "14:52:00Z",
+      "content": "南宮崎で日豊本線の\n西都城行に乗り換えよ",
+      "defaultState": "waitingForActivation",
+      "routeUpdates": [
+        {
+          "routeId": "20",
+          "field": "state",
+          "value": "activated"
+        }
+      ],
+      "users": [ "all" ]
+    },
+    {
+      "id": "31",
+      "day": 2,
+      "desiredNotificationTime": "15:48:00Z",
+      "limitTime": "15:58:00Z",
+      "content": "都城で鹿児島中央行に乗り換えよ\n(乗り換え時間に注意！)",
+      "defaultState": "waitingForActivation",
+      "routeUpdates": [
+        {
+          "routeId": "20",
+          "field": "destinationVisible",
+          "value": true
+        },
+        {
+          "routeId": "20",
+          "field": "message1",
+          "value": true
+        },
+        {
+          "routeId": "21",
+          "field": "state",
+          "value": "activated"
+        }
+      ],
+      "users": [ "all" ]
+    },
+    {
+      "id": "32",
+      "day": 2,
+      "desiredNotificationTime": "17:23:00Z",
+      "limitTime": "17:33:00Z",
+      "content": "鹿児島で指宿枕崎線の\n山川行に乗り換えよ",
+      "defaultState": "waitingForActivation",
+      "routeUpdates": [
+        {
+          "routeId": "21",
+          "field": "destinationVisible",
+          "value": true
+        },
+        {
+          "routeId": "22",
+          "field": "state",
+          "value": "activated"
+        }
+      ],
+      "users": [ "all" ]
+    },
+    {
+      "id": "33",
+      "day": 2,
+      "desiredNotificationTime": "18:49:00Z",
+      "limitTime": "18:59:00Z",
+      "content": "指宿で枕崎行の最終列車に乗り換えよ\n(待ち時間で夕食でもどうぞ)",
+      "defaultState": "waitingForActivation",
+      "routeUpdates": [
+        {
+          "routeId": "22",
+          "field": "destinationVisible",
+          "value": true
+        },
+        {
+          "routeId": "22",
+          "field": "message1",
+          "value": true
+        },
+        {
+          "routeId": "23",
+          "field": "state",
+          "value": "activated"
+        }
+      ],
+      "users": [ "all" ]
+    },
+    {
+      "id": "34",
+      "day": 2,
+      "desiredNotificationTime": "20:00:00Z",
+      "limitTime": "20:10:00Z",
+      "content": "枕崎は西日本で東京から最も遠い駅の一つ。\n東京-枕崎は実に最短経路で1524.6km。\nこれは東京-稚内のそれより遠い。",
+      "defaultState": "waitingForActivation",
+      "routeUpdates": [
+        {
+          "routeId": "23",
+          "field": "destinationVisible",
+          "value": true
+        },
+        {
+          "routeId": "23",
+          "field": "message2",
+          "value": true
+        }
+      ],
+      "users": [ "all" ]
+    },
+    {
+      "id": "35",
+      "day": 2,
+      "desiredNotificationTime": "21:27:00Z",
+      "limitTime": "21:37:00Z",
+      "content": "玉手箱３を開封し、駅前にある\n枕崎ステーションホテルに宿泊せよ\n(明日の出発は7:35発の列車です)",
+      "defaultState": "waitingForActivation",
+      "routeUpdates": [
+        {
+          "routeId": "24",
+          "field": "state",
+          "value": "activated"
+        }
+      ],
+      "users": [ "all" ]
+    },
+    {
+      "id": "36",
+      "day": 3,
+      "desiredNotificationTime": "07:25:00Z",
+      "limitTime": "07:35:00Z",
+      "content": "日本最南端のJR駅\n西大山へ向かえ",
+      "defaultState": "waitingForActivation",
+      "routeUpdates": [
+        {
+          "routeId": "24",
+          "field": "destinationVisible",
+          "value": true
+        },
+        {
+          "routeId": "24",
+          "field": "message1",
+          "value": true
+        }
+      ],
+      "users": [ "all" ]
+    },
+    {
+      "id": "37",
+      "day": 3,
+      "desiredNotificationTime": "08:36:00Z",
+      "limitTime": "08:46:00Z",
+      "content": "最南端の記念写真を撮影し\n後続の指宿行に乗車せよ",
+      "defaultState": "waitingForActivation",
+      "routeUpdates": [
+        {
+          "routeId": "25",
+          "field": "state",
+          "value": "activated"
+        }
+      ],
+      "users": [ "all" ]
+    },
+    {
+      "id": "38",
+      "day": 3,
+      "desiredNotificationTime": "09:19:00Z",
+      "limitTime": "09:29:00Z",
+      "content": "指宿で鹿児島中央行に乗り換えよ\n(乗り換え時間に注意！)",
+      "defaultState": "waitingForActivation",
+      "routeUpdates": [
+        {
+          "routeId": "25",
+          "field": "message1",
+          "value": true
+        },
+        {
+          "routeId": "26",
+          "field": "state",
+          "value": "activated"
+        }
+      ],
+      "users": [ "all" ]
+    },
+    {
+      "id": "39",
+      "day": 3,
+      "desiredNotificationTime": "10:25:00Z",
+      "limitTime": "10:35:00Z",
+      "content": "鹿児島で自由に観光せよ\n(14:15頃までに駅に戻ってください)",
+      "defaultState": "unsettled",
+      "routeUpdates": [
+        {
+          "routeId": "26",
+          "field": "destinationVisible",
+          "value": true
+        },
+        {
+          "routeId": "27",
+          "field": "state",
+          "value": "activated"
+        }
+      ],
+      "users": [ "all" ]
+    },
+    {
+      "id": "40",
+      "day": 3,
+      "desiredNotificationTime": "14:15:00Z",
+      "limitTime": "14:25:00Z",
+      "content": "鹿児島本線 川内行に乗車せよ",
+      "defaultState": "waitingForActivation",
+      "routeUpdates": [
+        {
+          "routeId": "27",
+          "field": "state",
+          "value": "activated"
+        }
+      ],
+      "users": [ "all" ]
+    },
+    {
+      "id": "41",
+      "day": 3,
+      "desiredNotificationTime": "15:00:00Z",
+      "limitTime": "15:10:00Z",
+      "content": "川内で肥薩おれんじ鉄道線\n八代行に乗り換えよ\n(玉手箱４を確認してください)",
+      "defaultState": "waitingForActivation",
+      "routeUpdates": [
+        {
+          "routeId": "27",
+          "field": "destinationVisible",
+          "value": true
+        },
+        {
+          "routeId": "27",
+          "field": "message1",
+          "value": true
+        },
+        {
+          "routeId": "28",
+          "field": "state",
+          "value": "activated"
+        }
+      ],
+      "users": [ "all" ]
+    },
+    {
+      "id": "42",
+      "day": 3,
+      "desiredNotificationTime": "17:33:00Z",
+      "limitTime": "17:43:00Z",
+      "content": "八代でJR鹿児島本線\n銀水行に乗り換えよ",
+      "defaultState": "waitingForActivation",
+      "routeUpdates": [
+        {
+          "routeId": "28",
+          "field": "destinationVisible",
+          "value": true
+        },
+        {
+          "routeId": "29",
+          "field": "state",
+          "value": "activated"
+        }
+      ],
+      "users": [ "all" ]
+    },
+    {
+      "id": "43",
+      "day": 3,
+      "desiredNotificationTime": "19:08:00Z",
+      "limitTime": "19:18:00Z",
+      "content": "荒尾で門司港行に乗り換えよ",
+      "defaultState": "waitingForActivation",
+      "routeUpdates": [
+        {
+          "routeId": "29",
+          "field": "destinationVisible",
+          "value": true
+        },
+        {
+          "routeId": "30",
+          "field": "state",
+          "value": "activated"
+        }
+      ],
+      "users": [ "all" ]
+    },
+    {
+      "id": "44",
+      "day": 3,
+      "desiredNotificationTime": "20:32:00Z",
+      "limitTime": "20:42:00Z",
+      "content": "途中の博多で下車し、サイコロを振れ",
+      "defaultState": "waitingForActivation",
+      "routeUpdates": [
+        {
+          "routeId": "30",
+          "field": "destinationVisible",
+          "value": true
+        }
+      ],
+      "users": [ "all" ]
+    },
+    {
+      "id": "45",
+      "day": 3,
+      "desiredNotificationTime": "20:45:00Z",
+      "limitTime": "20:55:00Z",
+      "content": "夜ご飯を食べるなど準備して、バスに乗車せよ\n(必要に応じてバス停位置は調べてください)",
+      "defaultState": "unsettled",
+      "routeUpdates": [
+        {
+          "routeId": "31",
+          "field": "state",
+          "value": "activated"
+        }
+      ],
+      "users": [ "all" ]
+    },
+    {
+      "id": "46",
+      "day": 3,
+      "desiredNotificationTime": "22:20:00Z",
+      "limitTime": "22:30:00Z",
+      "content": "現地で乗船券を購入し、厳原港行に乗船せよ\n到着後、15:25の出航まで現地観光です\n(到着後即下船するか考えておいてください)",
+      "defaultState": "waitingForActivation",
+      "routeUpdates": [
+        {
+          "routeId": "32",
+          "field": "state",
+          "value": "activated"
+        }
+      ],
+      "users": [ "all" ]
+    },
+    {
+      "id": "47",
+      "day": 4,
+      "desiredNotificationTime": "07:00:00Z",
+      "limitTime": "07:10:00Z",
+      "content": "15:25のフェリーで壱岐(郷ノ浦)へ向かえ",
+      "defaultState": "unsettled",
+      "routeUpdates": [
+        {
+          "routeId": "33",
+          "field": "state",
+          "value": "activated"
+        }
+      ],
+      "users": [ "all" ]
+    },
+    {
+      "id": "48",
+      "day": 4,
+      "desiredNotificationTime": "17:30:00Z",
+      "limitTime": "17:40:00Z",
+      "content": "本日は壱岐で一泊し、明日の昼まで壱岐を観光せよ\n(詳細は玉手箱５を確認せよ)",
+      "defaultState": "waitingForActivation",
+      "routeUpdates": [
+        {
+          "routeId": "34",
+          "field": "state",
+          "value": "activated"
+        }
+      ],
+      "users": [ "all" ]
+    },
+    {
+      "id": "49",
+      "day": 5,
+      "desiredNotificationTime": "14:50:00Z",
+      "limitTime": "15:00:00Z",
+      "content": "徒歩で西唐津駅へ移動せよ",
+      "defaultState": "waitingForActivation",
+      "routeUpdates": [
+        {
+          "routeId": "35",
+          "field": "state",
+          "value": "activated"
+        }
+      ],
+      "users": [ "all" ]
+    },
+    {
+      "id": "50",
+      "day": 5,
+      "desiredNotificationTime": "15:28:00Z",
+      "limitTime": "15:38:00Z",
+      "content": "西唐津から筑前前原行に乗車せよ",
+      "defaultState": "waitingForActivation",
+      "routeUpdates": [
+        {
+          "routeId": "36",
+          "field": "state",
+          "value": "activated"
+        }
+      ],
+      "users": [ "all" ]
+    },
+    {
+      "id": "51",
+      "day": 5,
+      "desiredNotificationTime": "16:21:00Z",
+      "limitTime": "16:31:00Z",
+      "content": "筑前前原で福岡空港行に乗り換えよ\n(乗り換え時間に注意)",
+      "defaultState": "waitingForActivation",
+      "routeUpdates": [
+        {
+          "routeId": "36",
+          "field": "message1",
+          "value": true
+        },
+        {
+          "routeId": "37",
+          "field": "state",
+          "value": "activated"
+        }
+      ],
+      "users": [ "all" ]
+    },
+    {
+      "id": "52",
+      "day": 5,
+      "desiredNotificationTime": "17:00:00Z",
+      "limitTime": "17:10:00Z",
+      "content": "博多で買い物等の支度を済ませ\n門司港行に乗車せよ",
+      "defaultState": "unsettled",
+      "routeUpdates": [
+        {
+          "routeId": "38",
+          "field": "state",
+          "value": "activated"
+        }
+      ],
+      "users": [ "all" ]
+    },
+    {
+      "id": "53",
+      "day": 5,
+      "desiredNotificationTime": "18:45:00Z",
+      "limitTime": "18:55:00Z",
+      "content": "小倉で下関行に乗り換えよ\n(トンネルで本州へ帰還します！)",
+      "defaultState": "waitingForActivation",
+      "routeUpdates": [
+        {
+          "routeId": "39",
+          "field": "state",
+          "value": "activated"
+        }
+      ],
+      "users": [ "all" ]
+    },
+    {
+      "id": "54",
+      "day": 5,
+      "desiredNotificationTime": "19:20:00Z",
+      "limitTime": "19:30:00Z",
+      "content": "下関では新山口行に乗り換えよ",
+      "defaultState": "waitingForActivation",
+      "routeUpdates": [
+        {
+          "routeId": "40",
+          "field": "state",
+          "value": "activated"
+        }
+      ],
+      "users": [ "all" ]
+    },
+    {
+      "id": "55",
+      "day": 5,
+      "desiredNotificationTime": "20:37:00Z",
+      "limitTime": "20:47:00Z",
+      "content": "新山口で岩国行に乗り換えよ",
+      "defaultState": "waitingForActivation",
+      "routeUpdates": [
+        {
+          "routeId": "41",
+          "field": "state",
+          "value": "activated"
+        }
+      ],
+      "users": [ "all" ]
+    },
+    {
+      "id": "56",
+      "day": 5,
+      "desiredNotificationTime": "22:54:00Z",
+      "limitTime": "23:04:00Z",
+      "content": "岩国で広島方面　西条行に乗り換えよ\n(乗り換え時間に注意！)",
+      "defaultState": "waitingForActivation",
+      "routeUpdates": [
+        {
+          "routeId": "41",
+          "field": "message1",
+          "value": true
+        },
+        {
+          "routeId": "42",
+          "field": "state",
+          "value": "activated"
+        }
+      ],
+      "users": [ "all" ]
+    },
+    {
+      "id": "57",
+      "day": 6,
+      "desiredNotificationTime": "00:01:00Z",
+      "limitTime": "00:11:00Z",
+      "content": "玉手箱６を開封し、広島で一泊せよ\n(出発は8:49です)",
+      "defaultState": "waitingForActivation",
+      "routeUpdates": [
+        {
+          "routeId": "43",
+          "field": "state",
+          "value": "activated"
+        }
+      ],
+      "users": [ "all" ]
+    },
+    {
+      "id": "58",
+      "day": 6,
+      "desiredNotificationTime": "08:39:00Z",
+      "limitTime": "08:49:00Z",
+      "content": "糸崎行には終点まで乗車せよ",
+      "defaultState": "waitingForActivation",
+      "routeUpdates": [
+        {
+          "routeId": "43",
+          "field": "destinationVisible",
+          "value": true
+        }
+      ],
+      "users": [ "all" ]
+    },
+    {
+      "id": "59",
+      "day": 6,
+      "desiredNotificationTime": "09:58:00Z",
+      "limitTime": "10:08:00Z",
+      "content": "糸崎で岡山行に乗り換えよ",
+      "defaultState": "waitingForActivation",
+      "routeUpdates": [
+        {
+          "routeId": "44",
+          "field": "state",
+          "value": "activated"
+        }
+      ],
+      "users": [ "all" ]
+    },
+    {
+      "id": "60",
+      "day": 6,
+      "desiredNotificationTime": "11:39:00Z",
+      "limitTime": "11:49:00Z",
+      "content": "岡山で相生行に乗り換えよ\n(ここで昼食等調達してもよい)",
+      "defaultState": "waitingForActivation",
+      "routeUpdates": [
+        {
+          "routeId": "45",
+          "field": "state",
+          "value": "activated"
+        }
+      ],
+      "users": [ "all" ]
+    },
+    {
+      "id": "61",
+      "day": 6,
+      "desiredNotificationTime": "13:08:00Z",
+      "limitTime": "13:18:00Z",
+      "content": "相生で姫路行に乗り換えよ\n(乗り換え時間に注意！)",
+      "defaultState": "waitingForActivation",
+      "routeUpdates": [
+        {
+          "routeId": "46",
+          "field": "state",
+          "value": "activated"
+        }
+      ],
+      "users": [ "all" ]
+    },
+    {
+      "id": "62",
+      "day": 6,
+      "desiredNotificationTime": "13:30:00Z",
+      "limitTime": "13:40:00Z",
+      "content": "姫路で長浜行に乗り換えよ",
+      "defaultState": "waitingForActivation",
+      "routeUpdates": [
+        {
+          "routeId": "47",
+          "field": "state",
+          "value": "activated"
+        }
+      ],
+      "users": [ "all" ]
+    },
+    {
+      "id": "63",
+      "day": 6,
+      "desiredNotificationTime": "16:14:00Z",
+      "limitTime": "16:24:00Z",
+      "content": "米原で大垣行に乗り換えよ",
+      "defaultState": "waitingForActivation",
+      "routeUpdates": [
+        {
+          "routeId": "48",
+          "field": "state",
+          "value": "activated"
+        }
+      ],
+      "users": [ "all" ]
+    },
+    {
+      "id": "64",
+      "day": 6,
+      "desiredNotificationTime": "16:55:00Z",
+      "limitTime": "17:05:00Z",
+      "content": "大垣で豊橋行に乗り換えよ",
+      "defaultState": "waitingForActivation",
+      "routeUpdates": [
+        {
+          "routeId": "49",
+          "field": "state",
+          "value": "activated"
+        }
+      ],
+      "users": [ "all" ]
+    },
+    {
+      "id": "65",
+      "day": 6,
+      "desiredNotificationTime": "18:29:00Z",
+      "limitTime": "18:39:00Z",
+      "content": "豊橋で浜松行に乗り換えよ",
+      "defaultState": "waitingForActivation",
+      "routeUpdates": [
+        {
+          "routeId": "50",
+          "field": "state",
+          "value": "activated"
+        }
+      ],
+      "users": [ "all" ]
+    },
+    {
+      "id": "66",
+      "day": 6,
+      "desiredNotificationTime": "19:13:00Z",
+      "limitTime": "19:23:00Z",
+      "content": "浜松で乗車整理券を購入し\nホームライナー静岡6号に乗り換えよ",
+      "defaultState": "waitingForActivation",
+      "routeUpdates": [
+        {
+          "routeId": "51",
+          "field": "state",
+          "value": "activated"
+        }
+      ],
+      "users": [ "all" ]
+    },
+    {
+      "id": "67",
+      "day": 6,
+      "desiredNotificationTime": "20:24:00Z",
+      "limitTime": "20:34:00Z",
+      "content": "静岡で熱海行に乗り換えよ\n(乗り換え時間に注意！)",
+      "defaultState": "waitingForActivation",
+      "routeUpdates": [
+        {
+          "routeId": "52",
+          "field": "state",
+          "value": "activated"
+        }
+      ],
+      "users": [ "all" ]
+    },
+    {
+      "id": "68",
+      "day": 6,
+      "desiredNotificationTime": "21:40:00Z",
+      "limitTime": "21:50:00Z",
+      "content": "熱海で東京行に乗り換えよ",
+      "defaultState": "waitingForActivation",
+      "routeUpdates": [
+        {
+          "routeId": "53",
+          "field": "state",
+          "value": "activated"
+        }
+      ],
+      "users": [ "all" ]
+    },
+    {
+      "id": "69",
+      "day": 6,
+      "desiredNotificationTime": "22:00:00Z",
+      "limitTime": "22:10:00Z",
+      "content": "途中の横浜で**が離脱します",
+      "defaultState": "waitingForActivation",
+      "routeUpdates": [],
+      "users": [ "all" ]
+    }
+  ]
+}

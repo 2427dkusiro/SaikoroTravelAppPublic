@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/activity_common_margin"
+    tools:context=".MainActivity"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+    >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <LinearLayout
+                android:id="@+id/CurrentRouteLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+             >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/home_route_card_margin"
+                    android:layout_marginLeft="@dimen/home_route_card_margin"
+                    android:text="@string/CurrentRouteLabel"
+        />
+
+                <SaikoroTravelApp.Components.RouteView
+                    android:id="@+id/CurrentRoute"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/home_route_card_margin"
+                    android:elevation="@dimen/home_route_card_elevation"
+        />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/NextRouteLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+            >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/home_route_card_margin"
+                    android:layout_marginLeft="@dimen/home_route_card_margin"
+                    android:text="@string/NextRouteLabel"
+        />
+
+                <SaikoroTravelApp.Components.RouteView
+                    android:id="@+id/NextRoute"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/home_route_card_margin"
+                    android:elevation="@dimen/home_route_card_elevation"
+        />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/HomeBottomUI"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#cccccc"
+        android:elevation="6dp"
+    >
+        <Button
+            android:id="@+id/OpenInstructionButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/home_route_card_margin"
+            android:visibility="gone"
+            android:text="次の行程を確認する"
+            />
+
+        <Button
+            android:id="@+id/OpenLotteryButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:text="次の行程サイコロを振る"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/DebugPanel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#cccccc"
+        android:elevation="6dp"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="↓開発者用UI ※本番環境では削除"
+            android:textAlignment="center"
+            />
+
+        <TextView
+            android:id="@+id/Debug_NowTimeText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+        <Button
+            android:id="@+id/Debug_SkipTimeButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="次のイベント時刻へスキップ"
+            />
+    </LinearLayout>
+</LinearLayout>
